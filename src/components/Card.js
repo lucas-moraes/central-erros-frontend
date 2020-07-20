@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import logo from '../resources/logo.png';
-
+import InputText from '../components/InputText';
 
 
 const CardStyle = styled.div`
@@ -19,34 +19,49 @@ const Titulo = styled.div`
     height: 60px;
 `;
 
+const Label = styled.p`
+    font-size: 12px;
+    margin: auto;
+    font-weight: 600;
+    margin-left: 3px;
+`;
+
 const Texto = styled.h4`
     margin: 0;
     padding: 17px;
 `;
 
 const Corpo = styled.div`
-    height: 180px;
+    height: 100px;
+    display: grid;
 `;
 
 const Rodape = styled.div`
     height: 60px;
 `;
 
-export function Card() {
+export function Card () {
     return (
         <CardStyle>
             <Titulo>
-                <img src={logo} style={{ padding: "10px", width: "40px", position: "absolute", left: 0 }} alt="Logotipo" />
+                <img src={ logo } style={ { padding: "10px", width: "40px", position: "absolute", left: 0 } } alt="Logotipo" />
                 <Texto>Login</Texto>
             </Titulo>
             <Corpo>
-                corpo
+                <div style={ { margin: 'auto' } }>
+                    <Label>Usuário</Label>
+                    <InputText />
+                </div>
+                <div style={ { margin: 'auto' } }>
+                    <Label>Senha</Label>
+                    <InputText />
+                </div>
             </Corpo>
             <Rodape>
-
+                Footer
             </Rodape>
         </CardStyle>
-    )
+    );
 }
 
 
