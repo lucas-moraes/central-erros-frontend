@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import logo from '../resources/logo.png';
 import InputText from '../components/InputText';
+import ButtonSubmit from '../components/ButtonSubmit';
 
 
 const CardStyle = styled.div`
     background: #ffff;
     width: 300px;
-    height: 300px;
     border-radius: 5%;
     box-shadow: 0 7px 10px 0 #de6e00;
     position: relative;
@@ -38,6 +38,7 @@ const Corpo = styled.div`
 
 const Rodape = styled.div`
     height: 60px;
+    display: flex;
 `;
 
 export function Card () {
@@ -58,7 +59,7 @@ export function Card () {
                 </div>
             </Corpo>
             <Rodape>
-                Footer
+                <ButtonSubmit color="#fd1d" title="Acessar" />
             </Rodape>
         </CardStyle>
     );
